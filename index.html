@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- C S  S  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>moviesAPI</title>
+</head>
+<body class="bg-black">
+    
+    <!-- START LOADING PAGE -->
+
+
+    <div class=" bg-black position-fixed w-100 vh-100 align-items-center justify-content-center loading---page">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </div>
+
+
+    <!-- END LOADING PAGE -->
+    <!-- START NAVBAR -->
+    <nav class="position-fixed d-flex">
+        <ul class="bg-dark nav flex-column align-items-center py-5 px-3 position-relative">
+            <li class="nav-item py-3">
+                <a href="#" data-api="now_playing" class="nav-link hover-color-effect text-capitalize text-white">now playing</a>
+            </li>
+            <li class="nav-item py-3">
+                <a href="#" data-api="popular" class="nav-link hover-color-effect text-capitalize text-white">popular</a>
+            </li>
+            <li class="nav-item py-3">
+                <a href="#" data-api="top_rated" class="nav-link hover-color-effect text-capitalize text-white">top rated</a>
+            </li>
+            <li class="nav-item py-3">
+                <a href="#" data-trending class="nav-link hover-color-effect text-capitalize text-white">trending</a>
+            </li>
+            
+            <li class="nav-item py-3">
+                <a href="#" data-api="upcoming" class="nav-link hover-color-effect text-capitalize text-white">upComing</a>
+            </li>
+            <li class="nav-item py-3">
+                <a href="#contact"  class="nav-link hover-color-effect text-capitalize text-white">contact us</a>
+            </li>
+            <li class="opacity-100 nav-item py-3 social-icons position-absolute bottom-0">
+                <ul class="nav">
+                    <li>
+                        <i class="pointer hover-color-effect text-white fa-brands fa-facebook-f">
+                            <!-- <a href=""></a> -->
+                        </i>
+                    </li>
+                    <li>
+                        <i class="pointer hover-color-effect text-white fa-brands fa-twitter mx-3">
+                            <!-- <a href=""></a> -->
+                        </i>
+                    </li>
+                    <li>
+                        <i class="pointer hover-color-effect text-white fa-solid fa-basketball">
+                            <!-- <a href=""></a> -->
+                        </i>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+        <div class="right_side bg-white d-flex justify-content-between align-items-center py-4 px-2 flex-column">
+            <div class="img">
+                <img src="images/logo.png"  alt="logo">
+            </div>
+            
+            <i class="fa-solid fa-bars  fa-lg pointer" id="togglerNav"></i>
+        
+            <!--  fa-bars , fa-xmark -->
+            <i class="fa-solid fa-share-nodes fa-lg pointer"></i>
+            
+        </div>
+
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- START MAIN SECTION  -->
+    <section id="mainSection" class="bg-black mx-auto py-5">
+        <div class="w-50 mx-auto py-4">
+           <input type="text" name="" class="text-white form-control bg-black border-0 border-bottom " id="searchByName" placeholder="searchByName...">
+        </div>    
+        <div class="container">
+            <div class="row g-3">
+                <!-- <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="movie-item position-relative overflow-hidden">
+                        <img src="images/61PVJ06oecwvcBisoAQu6SDfdcS.jpg" class="img-fluid" alt="movie image">
+                        <div class="text-content position-absolute w-100 h-100  start-0  text-center d-flex align-items-center justify-content-center text-white">
+                           <div class="">
+                            <h3>movie name</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, odio!</p>
+                                <p>release data</p>
+                                <i class="text-white fa-5x fa-solid fa-star position-absolute end-0 top-0 p-2 ">
+                                    <p class=" fs-5 position-absolute top-50  start-50 translate-middle text-danger">1.44</p>
+                                </i>
+                           </div>
+                                
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </section>
+    <!--END MAIN SECTION  -->
+
+    <!-- START CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <form action="" class="d-flex py-4 flex-wrap">
+               <div class="px-3 pb-3">
+                <input  data-RX="Pls enter name from 3 word , space bettwen them , each one at lest 3 char max 7 char " type="text" name="" class="text-white  form-control bg-black border-0 border-bottom " id="userName" placeholder="Enter ur name">
+               </div>
+               <div class="px-3 pb-3">
+                <input  data-RX="pls enter valid email x@gmail.x " type="text" name="" class="text-white  form-control bg-black border-0 border-bottom " id="userEmail" placeholder="uEnter ur email">
+               </div>
+               <div class="px-3 pb-3">
+                <input  data-RX="pls enter valid age (18  - 99)" type="number"  max="100" min="9"  class="text-white  form-control bg-black border-0 border-bottom " id="userAge" placeholder="Enter ur age">
+               </div>
+               <div class="px-3 pb-3">
+                <input  data-RX="pls enter valid 01xxxxxxxxx " type="tel" name="" class="text-white  form-control bg-black border-0 border-bottom " id="userTel" placeholder="Enter ur phone">
+               </div>
+               <div class="px-3 pb-3">
+                <input  data-RX="pls at least 8 char includes A-Z a-z " type="password" name="" class="text-white  form-control bg-black border-0 border-bottom " id="userPassword" placeholder="Enter ur password">
+               </div>
+               <div class="px-3 pb-3">
+                <input  data-RX="Didnt match" type="password" name="" class="text-white  form-control bg-black border-0 border-bottom " id="userPrePassword" placeholder="Repeat ur password">
+               </div>
+               <div class="w-100"></div>
+               <button class="btn btn-lg btn-outline-danger d-block ms-4" id="submit">Submit</button>
+            </form>
+        </div> 
+    </section>
+    <!-- END CONTACT SECTION -->
+
+
+    <!-- <img src="images/photo.png" alt=""> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
